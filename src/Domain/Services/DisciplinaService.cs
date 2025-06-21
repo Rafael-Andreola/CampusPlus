@@ -14,11 +14,6 @@ namespace Domain.Services
             repository = _repository;
         }
 
-        public bool Contratar(Aluno aluno, string disciplinaId)
-        {
-            return true;
-        }
-
         public Disciplina GetDisciplina(string disciplinaId)
         {
             return repository.Read(disciplinaId);

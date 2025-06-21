@@ -9,7 +9,6 @@ namespace Domain.Interfaces.Services
 {
     public interface IDisciplinaService
     {
-        public bool Contratar(Aluno aluno, string disciplinaId);
         public Disciplina GetDisciplina(string disciplinaId);
     }
 }

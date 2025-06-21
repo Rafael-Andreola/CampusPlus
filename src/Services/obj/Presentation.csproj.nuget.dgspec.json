@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\55549\\source\\repos\\CampusPlusAPI\\src\\Services\\Presentation.csproj": {}
+    "C:\\Users\\55549\\source\\repos\\Rafael-Andreola\\CampusPlus\\src\\Services\\Presentation.csproj": {}
   },
   "projects": {
-    "C:\\Users\\55549\\source\\repos\\CampusPlusAPI\\src\\Services\\Presentation.csproj": {
+    "C:\\Users\\55549\\source\\repos\\Rafael-Andreola\\CampusPlus\\src\\Services\\Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\55549\\source\\repos\\CampusPlusAPI\\src\\Services\\Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\55549\\source\\repos\\Rafael-Andreola\\CampusPlus\\src\\Services\\Presentation.csproj",
         "projectName": "Presentation",
-        "projectPath": "C:\\Users\\55549\\source\\repos\\CampusPlusAPI\\src\\Services\\Presentation.csproj",
+        "projectPath": "C:\\Users\\55549\\source\\repos\\Rafael-Andreola\\CampusPlus\\src\\Services\\Presentation.csproj",
         "packagesPath": "C:\\Users\\55549\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\55549\\source\\repos\\CampusPlusAPI\\src\\Services\\obj\\",
+        "outputPath": "C:\\Users\\55549\\source\\repos\\Rafael-Andreola\\CampusPlus\\src\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

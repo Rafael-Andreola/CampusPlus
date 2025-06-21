@@ -1,27 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Domain.Interfaces.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Controllers
 {
+    
     public class DisciplinaController : Controller
     {
-        private readonly ILogger<DisciplinaController> _logger;
+        private readonly ILogger<DisciplinaController> logger;
+        private readonly IDisciplinaService disciplinaService;
 
-        public DisciplinaController(ILogger<DisciplinaController> logger)
+        public DisciplinaController(ILogger<DisciplinaController> _logger, IDisciplinaService _disciplinaService)
         {
-            _logger = logger;
-        }
-
-        [HttpGet]
-        public IActionResult ContratarDisciplina(string alunoId string disciplinaId)
-        {
-
-
-            return;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
+            logger = _logger;
+            disciplinaService = _disciplinaService;
         }
     }
 }

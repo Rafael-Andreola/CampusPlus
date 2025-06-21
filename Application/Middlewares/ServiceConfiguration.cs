@@ -1,5 +1,6 @@
 ﻿using Domain.Interfaces;
 using Domain.Interfaces.Repositories;
+using Domain.Interfaces.Services;
 using Domain.Repositories;
 using Domain.Services;
 
@@ -14,7 +15,8 @@ namespace Application.Middlewares
             services.AddScoped<IDisciplinaService, DisciplinaService>();
             services.AddScoped<IDisciplinaRepository, DisciplinaRepository>();
 
-            //services.AddTransient<ProductRepository, ProductRepository>();
+            services.AddScoped<IAlunoRepository, AlunoRepository>();
+            services.AddScoped<IAlunoService, AlunoService>();
         }
     }
 }
