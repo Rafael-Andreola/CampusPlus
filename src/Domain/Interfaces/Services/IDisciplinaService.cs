@@ -9,6 +9,6 @@ namespace Domain.Interfaces.Services
 {
     public interface IDisciplinaService
     {
-        public Disciplina GetDisciplina(string disciplinaId);
+        public Disciplina GetDisciplina(long disciplinaId);
     }
 }

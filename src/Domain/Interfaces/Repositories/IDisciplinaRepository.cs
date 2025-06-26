@@ -10,7 +10,7 @@ namespace Domain.Interfaces.Repositories
 {
     public interface IDisciplinaRepository : IRepository<Disciplina>
     {
-        public Disciplina Read(string id);
+        public Disciplina Read(long id);
 
     }
 }

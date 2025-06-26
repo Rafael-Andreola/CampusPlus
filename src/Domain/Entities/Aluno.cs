@@ -9,8 +9,9 @@ namespace Domain.Entities
 {
     public class Aluno
     {
-        public string Nome { get; set; }
-        public string Email { get; set; }
-        public CursoInfoDTO Curso { get; set; }
+        public long id { get; set; }
+        public List<Matricula> matriculas { get; set; }
+        public long curso_id { get; set; }
+        public int status_matricula { get; set; } // 0 - aberta, 1 - fechada, 3 - Trancado
     }
 }

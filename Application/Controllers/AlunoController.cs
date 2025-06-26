@@ -17,9 +17,9 @@ namespace Application.Controllers
         }
 
         [HttpGet]
-        public IActionResult ContratarDisciplina(string alunoId, string disciplinaId)
+        public IActionResult ContratarDisciplina(string alunoId, long disciplinaId)
         {
-            alunoService.Contratar(alunoId, disciplinaId);
+            alunoService.ContratarDisciplina(alunoId, disciplinaId);
             return Ok(true);
         }
     }

@@ -15,7 +15,7 @@ namespace Domain.Interfaces.Services
         /// <param name="alunoId">ID do aluno.</param>
         /// <param name="disciplinaId">ID da disciplina.</param>
         /// <returns>True se a contratação for bem-sucedida, caso contrário, false.</returns>
-        bool Contratar(string alunoId, string disciplinaId);
+        bool ContratarDisciplina(string alunoId, long disciplinaId);
 
         /// <summary>
         /// Obtém os detalhes de um aluno.

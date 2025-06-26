@@ -3,9 +3,9 @@ namespace Domain.Entities
 {
     public class Disciplina
     {
-        public string Codigo { get; set; }
-        public string Nome { get; set; }
-        public int Creditos { get; set; }
+        public required string codigo { get; set; }
+        public string nome { get; set; }
+        public long creditos { get; set; }
         public List<Disciplina>? PreRequisitos { get; set; }
     }
 }

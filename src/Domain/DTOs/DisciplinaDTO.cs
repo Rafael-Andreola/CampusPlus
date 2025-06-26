@@ -8,11 +8,9 @@ namespace Domain.DTOs
 {
     public class DisciplinaDTO
     {
-        public DisciplinaDTO() { }
-        public string Codigo { get; set; }
-        public string Nome { get; set; }
-        public int Creditos { get; set; }
+        public string codigo { get; set; }
+        public string nome { get; set; }
+        public int creditos { get; set; }
         public List<PreRequisitoDTO>? PreRequisitos { get; set; }
-
     }
 }

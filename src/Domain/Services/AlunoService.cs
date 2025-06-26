@@ -7,21 +7,48 @@ namespace Domain.Services
     public class AlunoService : IAlunoService
     {
         private readonly IAlunoRepository alunoRepository;
-        private readonly IDisciplinaService disciplinaService;
-        public AlunoService(IAlunoRepository _alunoRepository, IDisciplinaService _disciplinaService)
+
+        private readonly IDisciplinaRepository disciplinaRepository;
+
+        public AlunoService(IAlunoRepository _alunoRepository, IDisciplinaRepository _disciplinaRepository)
         {
             alunoRepository = _alunoRepository;
-            disciplinaService = _disciplinaService;
+            disciplinaRepository = _disciplinaRepository;
         }
 
-        public bool Contratar(string alunoId, string disciplinaId)
+        public bool ContratarDisciplina(string alunoId, long disciplinaId)
         {
-            throw new NotImplementedException();
+            var aluno = this.GetAluno(alunoId);
+
+            var disciplina = disciplinaRepository.Read(disciplinaId);
+
+            if (disciplina != null)
+            {
+                throw new ArgumentException($"ID da disciplina inválido: {disciplinaId}");
+            }
+
+            var matricula = aluno.matriculas.Find(x => x.disciplina_cod == disciplinaId);
+
+            if (matricula != null)
+            {
+                throw new InvalidOperationException($"Aluno já está matriculado na disciplina com ID {disciplinaId}.");
+            }
+
+            matricula = new Matricula
+            {
+                id = disciplinaId,
+                status = 0, // 0 - ativa, 1 - cancelada, 2 - concluída
+                data = DateTime.Now,
+            };
+
+            aluno.matriculas.Add(matricula);
+
+            return true;
         }
 
         public Aluno GetAluno(string alunoId)
         {
-            throw new NotImplementedException();
+            return alunoRepository.GetById(alunoId) ?? throw new ArgumentException($"Aluno com ID {alunoId} não encontrado.");
         }
     }
 }
